@@ -45,7 +45,7 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 9900
 
-app.listen(9900, ()=>{
+app.listen(PORT, ()=>{
     connect()
     console.log("Backend server started")
 })
