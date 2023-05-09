@@ -24,6 +24,7 @@ const connect = async () => {
 }
 
 app.use(cors({origin:"http://localhost:5173", credentials:true}))
+// app.use(cors({origin:"http://localhost:5173", credentials:true}))
 app.use(express.json())
 app.use(cookieParser())
 
@@ -41,6 +42,8 @@ app.use((err, req, res, next) => {
 
     return res.status(errorStatus).send(errorMessage)
 })
+
+const PORT = process.env.PORT || 9900
 
 app.listen(9900, ()=>{
     connect()
